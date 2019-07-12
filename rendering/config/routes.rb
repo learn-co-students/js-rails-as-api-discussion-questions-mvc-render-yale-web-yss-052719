@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/xml', to: 'responses#xml'
   get '/csv', to: 'responses#csv'
   get '/png', to: 'responses#png'
+  
 end
