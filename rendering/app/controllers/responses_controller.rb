@@ -35,14 +35,14 @@ class ResponsesController < ApplicationController
       csv << ["author", "name"]
       csv << ["Cookie Monster", "Early bird gets the worm. But cookie taste better than worm. So me sleep in."]
     end
-
+    send_data(data)
     # you'll need to use send_data instead of render
     # if you want the file to have a particular filename, pass the filename: parameter
   end
 
   def png
     filename = "public/data.png"
-
+    send_file(filename)
     # you'll need to use send_file instead of render
     # if you want the image to show inline, use disposition: :inline
   end
